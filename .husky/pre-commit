@@ -3,5 +3,5 @@
 
 # npm test
 npx hardhat test
-eslint lint
-solhint lint
+# npx eslint '*.ts'
+npx solhint '*.sol'
