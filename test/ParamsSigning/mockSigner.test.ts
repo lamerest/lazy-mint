@@ -3,7 +3,7 @@ import { isBytesLike, verifyMessage } from 'ethers/lib/utils'
 import { IParamsToSign, MockParamsSigner } from '../../classes/MockParamsSigner'
 import { IParamsSigner } from '../../types/abstractions/IParamsSigner'
 
-xdescribe('MockParamsSigner', async () => {
+describe.skip('MockParamsSigner', async () => {
 	let signer: IParamsSigner
 
 	before(async () => {
