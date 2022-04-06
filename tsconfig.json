@@ -14,6 +14,7 @@
 		"graph/**/*",
 		"scripts/**/*",
 		"tasks/**/*",
+		"classes/**/*",
 		"test/**/*",
 		"typechain/**/*",
 		"types/**/*.ts"

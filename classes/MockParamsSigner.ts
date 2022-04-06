@@ -1,7 +1,7 @@
-import { IParamsSigner } from '../interfaces/IParamsSigner'
-import { ISignedParams } from '../models/signed-params'
 import { ethers } from 'hardhat'
 import { parseEther } from 'ethers/lib/utils'
+import { IParamsSigner } from '../types/abstractions/IParamsSigner'
+import { ISignedParams } from '../types/interfaces/signed-params'
 
 export interface IParamsToSign {
 	expirationTimestampInSeconds: number
