@@ -7,10 +7,10 @@
     ],
     "quotes": "single",
     "func-visibility": [
-      "warn",
       {
         "ignoreConstructors": true
-      }
+      },
+      "warn"
     ]
   }
 }
