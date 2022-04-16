@@ -1,7 +1,7 @@
 import { ethers } from 'hardhat'
 import { parseEther } from 'ethers/lib/utils'
 import { IParamsSigner } from '../types/abstractions/IParamsSigner'
-import { ISignedParams } from '../types/interfaces/signed-params'
+import { SignedParams } from '../types/interfaces/SignedParams'
 
 export interface IParamsToSign {
 	expirationTimestampInSeconds: number
@@ -25,7 +25,7 @@ export class MockParamsSigner implements IParamsSigner {
 		this.privateKey = privateKey
 	}
 
-	async getSignedMintCallParams(mutationId: number, ethCost: number): Promise<ISignedParams> {
+	async getSignedMintCallParams(mutationId: number, ethCost: number): Promise<SignedParams> {
 		const weiAmount = parseEther(ethCost.toString())
 		const wei = weiAmount.toString()
 
@@ -56,7 +56,7 @@ export class MockParamsSigner implements IParamsSigner {
 		return await signer.signMessage(data)
 	}
 
-	private getSctructWithParamsAndSignature(params: IParamsToSign, signature: string): ISignedParams {
+	private getSctructWithParamsAndSignature(params: IParamsToSign, signature: string): SignedParams {
 		const { expirationTimestampInSeconds, weiCost, mutationId } = params
 		return {
 			signature,

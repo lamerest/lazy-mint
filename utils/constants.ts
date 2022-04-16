@@ -15,3 +15,5 @@ export const chainIds = {
 	ganache: 1337,
 	hardhat: 31337,
 }
+
+export const NETWORK_CURRENCY_DECIMALS = 18
